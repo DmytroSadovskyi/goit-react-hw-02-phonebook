@@ -11,20 +11,23 @@ export const Form = styled.form`
   border-radius: 5px;
 `;
 
+export const FormField = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 100%;
+`;
+
 export const FormLabel = styled.label`
   margin-bottom: 10px;
 `;
 
 export const FormInput = styled.input`
-  padding-left: 30px;
   height: 25px;
-  margin-bottom: 10px;
+  width: 88%;
+  padding-left: 30px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-
-  &:last-of-type {
-    margin-bottom: 20px;
-  }
 `;
 
 export const FormButton = styled.button`
