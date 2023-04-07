@@ -9,6 +9,8 @@ export const ContactItem = styled.li`
   border-radius: 5px;
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 
   &:not(:last-of-type) {
     margin-bottom: 10px;
