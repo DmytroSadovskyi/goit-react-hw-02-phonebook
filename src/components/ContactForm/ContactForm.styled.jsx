@@ -22,22 +22,26 @@ export const FormLabel = styled.label`
   margin-bottom: 10px;
 `;
 
+export const Wrapper = styled.div`
+  position: relative;
+`;
+
 export const FormInput = styled.input`
   height: 25px;
   width: 88%;
   padding-left: 30px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
+  border-radius: 5px;
 `;
 
 export const FormButton = styled.button`
   display: block;
   margin: 0 auto;
-  width: 100px;
+  padding: 10px;
+
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
   text-align: center;
-`;
-
-export const Wrapper = styled.div`
-  position: relative;
+  background-color: greenyellow;
 `;
