@@ -3,6 +3,7 @@ import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
 import {
   Form,
+  FormField,
   Wrapper,
   FormLabel,
   FormInput,
@@ -36,48 +37,52 @@ export default class ContactForm extends Component {
     return (
       <>
         <Form action="" onSubmit={this.handleSubmit}>
-          <FormLabel htmlFor={this.nameInput}>Name</FormLabel>
-          <Wrapper>
-            <FormInput
-              type="text"
-              name="name"
-              id={this.nameInput}
-              value={name}
-              onChange={this.handleChange}
-              pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-              title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-              required
-            />{' '}
-            <BsFillPersonFill
-              style={{
-                position: 'absolute',
-                top: '20%',
-                left: '10px',
-                transform: 'translateY(-20%)',
-              }}
-            />
-          </Wrapper>
-          <FormLabel htmlFor={this.telInput}>Number</FormLabel>
-          <Wrapper>
-            <FormInput
-              type="tel"
-              name="number"
-              id={this.telInput}
-              value={number}
-              onChange={this.handleChange}
-              pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-              title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-              required
-            />
-            <GiSmartphone
-              style={{
-                position: 'absolute',
-                top: '20%',
-                left: '10px',
-                transform: 'translateY(-20%)',
-              }}
-            />
-          </Wrapper>
+          <FormField>
+            <FormLabel htmlFor={this.nameInput}>Name</FormLabel>
+            <Wrapper>
+              <FormInput
+                type="text"
+                name="name"
+                id={this.nameInput}
+                value={name}
+                onChange={this.handleChange}
+                pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+                title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+                required
+              />{' '}
+              <BsFillPersonFill
+                style={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: '10px',
+                  transform: 'translateY(-50%)',
+                }}
+              />
+            </Wrapper>
+          </FormField>
+          <FormField>
+            <FormLabel htmlFor={this.telInput}>Number</FormLabel>
+            <Wrapper>
+              <FormInput
+                type="tel"
+                name="number"
+                id={this.telInput}
+                value={number}
+                onChange={this.handleChange}
+                pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+                title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+                required
+              />
+              <GiSmartphone
+                style={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: '10px',
+                  transform: 'translateY(-50%)',
+                }}
+              />
+            </Wrapper>
+          </FormField>
           <FormButton type="submit">Add contact</FormButton>
         </Form>
       </>
