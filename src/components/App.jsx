@@ -5,6 +5,7 @@ import Container from './Container/Container';
 import ContactForm from './ContactForm/ContactForm';
 import ContactsList from './ContactsList/ContactsList';
 import Filter from './Filter/Filter';
+import { MainTitle, SecondTitle } from './Container/Container.styled';
 
 export class App extends Component {
   state = {
@@ -19,9 +20,9 @@ export class App extends Component {
 
   addContact = (name, number) => {
     const contact = {
+      id: nanoid(),
       name,
       number,
-      id: nanoid(),
     };
     if (
       this.state.contacts.find(
@@ -60,9 +61,9 @@ export class App extends Component {
     const visibleContacts = this.getVisibleContacts();
     return (
       <Container>
-        <h1>Phonebook</h1>
+        <MainTitle>Phonebook</MainTitle>
         <ContactForm onSubmit={this.addContact} />
-        <h2>Contacts</h2>
+        <SecondTitle>Contacts</SecondTitle>
         <Filter value={filter} onChange={this.changeFilter} />
         <ContactsList
           contacts={visibleContacts}
