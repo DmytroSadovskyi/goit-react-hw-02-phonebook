@@ -1,10 +1,10 @@
 import React from 'react';
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
-import Container from './Container/Container';
-import ContactForm from './ContactForm/ContactForm';
-import ContactsList from './ContactsList/ContactsList';
-import Filter from './Filter/Filter';
+import Container from './Container';
+import ContactForm from './ContactForm';
+import ContactsList from './ContactsList';
+import Filter from './Filter';
 import { MainTitle, SecondTitle } from './Container/Container.styled';
 
 export class App extends Component {
